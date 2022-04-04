@@ -16,8 +16,11 @@ export const CreateAccount: React.FunctionComponent<
   const [firstName, setFirstName] = React.useState('');
 
   return (
-    <ScrollView style={{}} contentContainerStyle={{}}>
-      <Text style={{}}>Sign Up</Text>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={{ paddingHorizontal: 14 }}
+    >
+      <Text style={styles.title}>Sign Up</Text>
       <InputGroup
         label="First name"
         value={firstName}
@@ -49,7 +52,7 @@ export const CreateAccount: React.FunctionComponent<
         onChangeText={setFirstName}
         password
       />
-      <View style={{}} />
+      <View style={{ marginVertical: 12 }} />
       <Button onPress={signup}>Sign Up</Button>
     </ScrollView>
   );
@@ -58,8 +61,11 @@ export const CreateAccount: React.FunctionComponent<
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'grey',
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 24,
+    marginTop: 6,
+    textAlign: 'center',
   },
 });

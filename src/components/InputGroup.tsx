@@ -27,10 +27,10 @@ const InputGroup: React.FC<InputGroupProps> = ({
   onBlur,
 }) => {
   return (
-    <View style={{}}>
-      {!!label && <Text style={{}}>{label}</Text>}
+    <View>
+      {!!label && <Text style={styles.label}>{label}</Text>}
       <TextInput
-        style={{}}
+        style={styles.textInput}
         placeholder={placeholder}
         value={value}
         onChangeText={onChangeText}
@@ -43,11 +43,13 @@ const InputGroup: React.FC<InputGroupProps> = ({
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'grey',
-    alignItems: 'center',
-    justifyContent: 'center',
+  label: { marginVertical: 9, fontSize: 16 },
+  textInput: {
+    borderRadius: 3,
+    borderColor: '#FFFFFF',
+    borderWidth: 1,
+    paddingVertical: 9,
+    paddingHorizontal: 9,
   },
 });
 
