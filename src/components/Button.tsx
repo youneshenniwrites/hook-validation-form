@@ -3,27 +3,29 @@ import { Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 
 interface ButtonProps {
   children: string;
-  type?: 'primary' | 'secondary';
   onPress: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  type = 'primary',
-  children,
-  onPress,
-}) => {
+const Button: React.FC<ButtonProps> = ({ children, onPress }) => {
   return (
     <TouchableOpacity onPress={onPress}>
-      <View style={{}}>
-        <Text style={{}}>{children}</Text>
+      <View style={styles.button}>
+        <Text style={styles.text}>{children}</Text>
       </View>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'white',
+  button: {
+    paddingHorizontal: 4,
+    paddingVertical: 4,
+    marginTop: 2,
+    backgroundColor: 'purple',
+  },
+  text: {
+    color: 'white',
+    textAlign: 'center',
   },
 });
 

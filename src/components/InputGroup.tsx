@@ -1,5 +1,11 @@
 import React from 'react';
-import { KeyboardTypeOptions, Text, TextInput, View } from 'react-native';
+import {
+  KeyboardTypeOptions,
+  Text,
+  TextInput,
+  View,
+  StyleSheet,
+} from 'react-native';
 
 interface InputGroupProps {
   label?: string;
@@ -35,5 +41,14 @@ const InputGroup: React.FC<InputGroupProps> = ({
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'grey',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default InputGroup;
